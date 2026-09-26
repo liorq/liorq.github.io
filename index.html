@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lior Daniel | Full-Stack Developer</title>
+<meta name="description" content="I'm Lior, a Full-Stack Developer (.NET Core, C#, Angular, SQL Server) with 3.5 years on production systems. Open to Full-Stack and Backend roles.">
+<meta property="og:title" content="Lior Daniel | Full-Stack Developer">
+<meta property="og:description" content="I build web apps from the database to the button. 3.5 years on production systems. Open to Full-Stack and Backend roles.">
+<meta property="og:image" content="lior.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0E0A1F; --bg2:#150F2C; --card:#1A1336; --line:rgba(185,168,255,.14);
+  --text:#F4F2FB; --muted:#A9A2C4; --accent:#7C5CFF; --accent2:#B9A8FF; --green:#4ADE80;
+  --mono:'JetBrains Mono',ui-monospace,monospace; --sans:Inter,system-ui,sans-serif;
+  --ease-out:cubic-bezier(0.23,1,0.32,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+h2{font-size:clamp(28px,4vw,38px);letter-spacing:-.8px;line-height:1.15;margin-bottom:12px;text-wrap:balance}
+.eyebrow{font:600 13px var(--mono);color:var(--accent2);letter-spacing:.5px;margin-bottom:10px;display:block}
+.lead{color:var(--muted);font-size:18px;max-width:660px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(14,10,31,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;text-decoration:none}
+.logo img{width:30px;height:30px;border-radius:50%;object-fit:cover}
+nav ul{display:flex;align-items:center;gap:26px;list-style:none;font-size:15px}
+nav ul a{text-decoration:none;color:var(--muted);transition:color .15s ease}
+nav ul a.cta{color:#fff;background:var(--accent);padding:8px 16px;border-radius:8px;font-weight:600}
+@media (hover:hover) and (pointer:fine){nav ul a:not(.cta):hover{color:var(--text)}}
+@media (max-width:720px){nav ul li:not(:last-child){display:none}}
+
+/* hero */
+.hero{padding:72px 0 64px;background:radial-gradient(640px 360px at 78% 38%,rgba(124,92,255,.30),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:40px}.photo-col{order:-1}}
+.status{display:inline-flex;align-items:center;gap:8px;font:500 13px var(--mono);color:var(--green);border:1px solid rgba(74,222,128,.3);padding:6px 12px;border-radius:999px;margin-bottom:22px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(74,222,128,.15)}
+.hero h1{font-size:clamp(38px,5.4vw,60px);line-height:1.05;letter-spacing:-1.8px;font-weight:800;text-wrap:balance}
+.hero h1 span{color:var(--accent2)}
+.hero p.sub{font-size:19px;color:var(--muted);margin:20px 0 30px;max-width:540px}
+.hero p.sub b{color:var(--text);font-weight:600}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:10px;text-decoration:none;
+  transition:transform 160ms var(--ease-out),background-color .15s ease}
+.btn:active{transform:scale(.97)}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.ghost{border:1px solid var(--line);color:var(--text);background:rgba(255,255,255,.03)}
+@media (hover:hover) and (pointer:fine){.btn.primary:hover{background:#6A48F5}.btn.ghost:hover{background:rgba(255,255,255,.07)}}
+.reassure{margin-top:14px;font-size:14px;color:var(--muted)}
+
+.photo-col{display:flex;justify-content:center}
+.photo{position:relative;width:min(360px,80vw)}
+.photo img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:28px;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.photo .badge{position:absolute;background:rgba(20,14,42,.92);border:1px solid var(--line);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border-radius:12px;padding:10px 14px;font-size:13px;line-height:1.35;color:var(--muted);box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.photo .badge b{display:block;color:var(--text);font-size:14px}
+.photo .b1{left:-28px;bottom:34px}
+.photo .b2{right:-22px;top:28px}
+@media (max-width:900px){.photo{width:min(280px,72vw)}.photo .b1{bottom:-22px}.photo .b2{top:-16px}}
+@media (max-width:480px){.photo .b1{left:-8px}.photo .b2{right:-8px}}
+
+.proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:26px;padding-bottom:26px}
+@media (max-width:720px){.proof .wrap{grid-template-columns:repeat(2,1fr)}}
+.proof div{font-size:14px;color:var(--muted)}
+.proof b{display:block;font-size:26px;color:var(--text);letter-spacing:-.5px}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+@media (max-width:900px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column}
+.card .tag{font:600 12px var(--mono);color:var(--accent2);margin-bottom:12px}
+.card h3{font-size:20px;letter-spacing:-.3px;margin-bottom:8px;text-wrap:balance}
+.card p{color:var(--muted);font-size:15px;flex:1}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.chips span{font:12px var(--mono);color:#CFC6F5;background:rgba(124,92,255,.12);padding:3px 9px;border-radius:6px}
+
+.why{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why .grid .card{background:transparent}
+.why .num{font:700 14px var(--mono);color:var(--green);margin-bottom:10px}
+
+.lab .grid{grid-template-columns:repeat(2,1fr)}
+@media (max-width:900px){.lab .grid{grid-template-columns:1fr}}
+.card .metric{font:600 13px var(--mono);color:var(--green);margin-top:14px}
+.card a.more{align-self:flex-start;margin-top:14px;font-weight:600;font-size:14px;color:var(--accent2);text-decoration:none}
+@media (hover:hover) and (pointer:fine){.card a.more:hover{text-decoration:underline}}
+.card.featured{grid-column:span 2;background:linear-gradient(135deg,rgba(124,92,255,.22),var(--card) 60%)}
+@media (max-width:900px){.card.featured{grid-column:auto}}
+
+/* terminal */
+.term-sec{padding-top:0}
+.term-sec .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+@media (max-width:900px){.term-sec .wrap{grid-template-columns:1fr}}
+.term{background:#0A0716;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.term-bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line);background:#120D26}
+.term-bar i{width:11px;height:11px;border-radius:50%;background:#3A3355}
+.term-bar span{margin-left:10px;font:12px var(--mono);color:var(--muted)}
+.term-body{height:260px;overflow-y:auto;padding:16px 18px;font:14px/1.7 var(--mono);color:#D9D4EE;cursor:text}
+.term-body .p{color:var(--green)}.term-body .k{color:var(--accent2)}.term-body .m{color:var(--muted)}
+.term-body a{color:var(--accent2)}
+.term-in{display:flex;gap:8px}
+.term-in input{flex:1;min-width:0;background:none;border:0;outline:0;color:var(--text);font:inherit;caret-color:var(--green)}
+.cmds{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.cmds button{font:600 13px var(--mono);color:var(--accent2);background:rgba(124,92,255,.12);border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer;
+  transition:transform 160ms var(--ease-out),background-color .15s ease}
+.cmds button:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){.cmds button:hover{background:rgba(124,92,255,.22)}}
+
+/* stack */
+.stack{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+@media (max-width:900px){.stack{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.stack{grid-template-columns:1fr}}
+.stack div{border:1px solid var(--line);border-radius:12px;padding:20px}
+.stack h4{font:600 13px var(--mono);color:var(--accent2);margin-bottom:10px}
+.stack p{font-size:15px;color:var(--muted)}
+
+/* offer */
+.offer .box{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;background:linear-gradient(135deg,#2A1B6B,#1A1336);border:1px solid rgba(185,168,255,.3);border-radius:20px;padding:48px}
+.offer .box img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid rgba(185,168,255,.35)}
+@media (max-width:720px){.offer .box{grid-template-columns:1fr;text-align:center;padding:36px 22px}.offer .box img{margin:0 auto}.offer .btns{justify-content:center}}
+.offer h2{margin-bottom:10px}
+.offer .lead{margin-bottom:26px}
+footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:var(--muted)}
+
+/* entrance */
+.rise{opacity:0;transform:translateY(8px);animation:rise 420ms var(--ease-out) forwards}
+.d1{animation-delay:40ms}.d2{animation-delay:100ms}.d3{animation-delay:160ms}.d4{animation-delay:220ms}.d5{animation-delay:280ms}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rise{transform:none;animation:fade 200ms ease forwards}
+  .btn,.cmds button{transition:background-color .15s ease}.btn:active,.cmds button:active{transform:none}
+}
+@keyframes fade{to{opacity:1}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top"><img src="lior.jpg" alt="">Lior Daniel</a>
+  <ul>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#lab">Side projects</a></li>
+    <li><a href="#stack">Stack</a></li>
+    <li><a class="cta" href="#contact">Let's talk</a></li>
+  </ul>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <span class="status rise d1"><i></i>Open to Full-Stack &amp; Backend roles</span>
+    <h1 class="rise d2">Hi, I'm Lior.<br><span>I build web apps from the database to the button.</span></h1>
+    <p class="sub rise d3">For the past 3.5 years I've been a Full-Stack developer at Matrix, working in <b>.NET Core, C#, Angular and SQL Server</b> on systems people rely on, like the Home Front Command website. Now I'm looking for my next team.</p>
+    <div class="btns rise d4">
+      <a class="btn primary" href="mailto:liorqm@gmail.com?subject=Let's%20talk%20about%20a%20role&amp;body=Hi%20Lior%2C%0D%0A%0D%0AWe're%20hiring%20for%3A%20%0D%0AStack%3A%20%0D%0AA%20good%20time%20for%20a%2020-minute%20call%3A%20">Email me</a>
+      <a class="btn ghost" href="#work">See what I've built</a>
+    </div>
+    <p class="reassure rise d5">Based in Modi'in. On-site or hybrid.</p>
+  </div>
+  <div class="photo-col rise d3">
+    <div class="photo">
+      <img src="lior.jpg" alt="Lior Daniel" width="800" height="800">
+      <div class="badge b2"><b>Full-Stack Developer</b>at Matrix</div>
+      <div class="badge b1"><b>6,400+ followers</b>read what I write about AI and code</div>
+    </div>
+  </div>
+</div></header>
+
+<div class="proof"><div class="wrap">
+  <div><b>3.5 years</b>on production systems</div>
+  <div><b>3</b>enterprise clients through Matrix</div>
+  <div><b>6,400+</b>LinkedIn followers</div>
+  <div><b>38K</b>views on my most-read post</div>
+</div></div>
+
+<section id="work"><div class="wrap">
+  <span class="eyebrow">// at work</span>
+  <h2>What I've shipped at Matrix</h2>
+  <p class="lead">I own features across the whole stack: database, API, Angular UI and deployment. When my team was cut in half, I took on a much bigger share of the delivery and kept the pace.</p>
+  <div class="grid">
+    <div class="card">
+      <span class="tag">PUBLIC SITE</span>
+      <h3>Home Front Command website</h3>
+      <p>A CMS-driven public site with real-time threat alerts, so people get critical updates fast. I build features, fix bugs and support it in production.</p>
+      <div class="chips"><span>.NET Core</span><span>Umbraco</span><span>Redis</span><span>Angular</span></div>
+    </div>
+    <div class="card">
+      <span class="tag">BUILT END TO END</span>
+      <h3>El Al: a crawler and a legal docs system</h3>
+      <p>Two systems I built from scratch: a crawler that scans websites and a system for legal documentation. I worked directly with the department's development manager on both.</p>
+      <div class="chips"><span>C#</span><span>Web API</span><span>SQL Server</span></div>
+    </div>
+    <div class="card">
+      <span class="tag">INTERNAL PLATFORM</span>
+      <h3>Iscar inventory system</h3>
+      <p>A web system for inventory and maintenance management that made internal work simpler. Stored procedures with Dapper, REST APIs, and deployments on Azure and IIS.</p>
+      <div class="chips"><span>Angular</span><span>Dapper</span><span>Azure</span><span>Docker</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="why"><div class="wrap">
+  <span class="eyebrow">// why me</span>
+  <h2>What you get if you hire me</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="num">01</div>
+      <h3>One person for the whole feature</h3>
+      <p>SQL, API, Angular, Docker, and the deploy to Azure or IIS. You don't need to hand me off to someone else for the backend half.</p>
+    </div>
+    <div class="card">
+      <div class="num">02</div>
+      <h3>I talk to people, not just compilers</h3>
+      <p>Before I wrote code, I spent six years in sales and management at Partner and HOT, including three years running a branch. Users, clients and managers are my comfort zone.</p>
+    </div>
+    <div class="card">
+      <div class="num">03</div>
+      <h3>AI every day, with my eyes open</h3>
+      <p>I work with Claude Code, Copilot, Cursor and Codex daily. I've also written publicly about the time AI almost broke production, so I check its work.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="lab" id="lab"><div class="wrap">
+  <span class="eyebrow">// after hours</span>
+  <h2>What I build for fun</h2>
+  <p class="lead">I like finding the edge of what AI can do, and I write about it honestly, including the parts that blew up in my face.</p>
+  <div class="grid">
+    <div class="card featured">
+      <span class="tag">AI · PERSONAL PROJECT · DEMO VIDEO</span>
+      <h3>An AI companion for EMDR-style sessions</h3>
+      <p>I built it for myself with Claude Code (no model training) and have done more than 40 hour-long sessions with it. Hooking a model up to a chat was the easy part. The hard part was summarizing an hour-long session without losing what matters, remembering limiting beliefs like "I'm not good enough" when they come back weeks later, and tracking distress ratings over time. The code stays private, but the video shows it working.</p>
+      <div class="metric">The follow-up post: 9,300+ impressions, 36 comments</div>
+      <a class="more" href="https://www.linkedin.com/feed/update/urn:li:activity:7493736626364407809/" target="_blank" rel="noopener">Watch the demo video →</a>
+    </div>
+    <div class="card">
+      <span class="tag">AI · TRADING</span>
+      <h3>The trading model that was going to make me rich</h3>
+      <p>Profitable 8 months out of 9. I was already checking yacht prices in Thailand. Then I ran the same strategy on 27 years of data and the profit disappeared.</p>
+      <a class="more" href="https://www.linkedin.com/feed/update/urn:li:activity:7509702981286744064/" target="_blank" rel="noopener">Read the post →</a>
+    </div>
+    <div class="card">
+      <span class="tag">AI · TESTING</span>
+      <h3>3 seconds to almost break production</h3>
+      <p>I asked AI to write tests for a payment flow that uses a credit card token. It took 3 seconds, and it nearly broke production. Here's what happened.</p>
+      <a class="more" href="https://www.linkedin.com/feed/update/urn:li:activity:7505556173492944897/" target="_blank" rel="noopener">Read the post →</a>
+    </div>
+    <div class="card">
+      <span class="tag">SEO · DATA</span>
+      <h3>50,000 rows at 2 a.m.</h3>
+      <p>I opened Search Console to check keyword cannibalization on my own site and got 50,000 rows of data. My soy coffee was already cold. This is how I made sense of it.</p>
+      <a class="more" href="https://www.linkedin.com/feed/update/urn:li:activity:7450896419852312576/" target="_blank" rel="noopener">Read the post →</a>
+    </div>
+    <div class="card">
+      <span class="tag">MY MOST-READ POST</span>
+      <h3>A ₪1M competition and an argument about fingernails</h3>
+      <p>Plus500's founder offered a million shekels for a working product, and I found myself arguing with Claude about fingernails.</p>
+      <div class="metric">38,400+ impressions, 200+ reactions</div>
+      <a class="more" href="https://www.linkedin.com/feed/update/urn:li:activity:7499035202195976192/" target="_blank" rel="noopener">Read the post →</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="term-sec"><div class="wrap">
+  <div>
+    <span class="eyebrow">// for developers</span>
+    <h2>Prefer the command line?</h2>
+    <p class="lead">Ask the terminal. Type a command or tap one below.</p>
+    <div class="cmds">
+      <button type="button" data-cmd="whoami">whoami</button>
+      <button type="button" data-cmd="stack">stack</button>
+      <button type="button" data-cmd="projects">projects</button>
+      <button type="button" data-cmd="hire">hire</button>
+    </div>
+  </div>
+  <div class="term">
+    <div class="term-bar"><i></i><i></i><i></i><span>lior@dev: ~</span></div>
+    <div class="term-body" id="tb"><div id="out"></div><div class="term-in"><span class="p">$</span><input id="cmd" aria-label="Terminal command" autocomplete="off" spellcheck="false" placeholder="type help"></div></div>
+  </div>
+</div></section>
+
+<section id="stack" style="padding-top:0"><div class="wrap">
+  <span class="eyebrow">// toolbox</span>
+  <h2>What I work with</h2>
+  <div class="stack">
+    <div><h4>Frontend</h4><p>Angular, TypeScript, HTML, SCSS</p></div>
+    <div><h4>Backend</h4><p>C#, .NET Core, ASP.NET Web API, Worker Services, Umbraco, Node.js</p></div>
+    <div><h4>Data</h4><p>SQL Server, Dapper, Entity Framework, Redis, MongoDB</p></div>
+    <div><h4>Infra and AI</h4><p>Docker, Azure, IIS, Git, Claude Code, Copilot, Cursor, Codex</p></div>
+  </div>
+</div></section>
+
+<section id="contact" style="padding-top:0"><div class="wrap"><div class="offer"><div class="box">
+  <img src="lior.jpg" alt="Lior Daniel">
+  <div>
+    <span class="eyebrow">// let's talk</span>
+    <h2>Hiring a Full-Stack or Backend developer? Give me 20 minutes.</h2>
+    <p class="lead">Send me a line about the team and the stack. I'll reply with my CV and a few times that work for a call.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:liorqm@gmail.com?subject=Let's%20talk%20about%20a%20role&amp;body=Hi%20Lior%2C%0D%0A%0D%0AWe're%20hiring%20for%3A%20%0D%0AStack%3A%20%0D%0AA%20good%20time%20for%20a%2020-minute%20call%3A%20">Email me</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/lior-daniel-3b20a62ab/" target="_blank" rel="noopener">Message me on LinkedIn</a>
+    </div>
+  </div>
+</div></div></div></section>
+
+<footer><div class="wrap">
+  <span>© 2026 Lior Daniel · Modi'in, Israel</span>
+  <span><a href="mailto:liorqm@gmail.com">liorqm@gmail.com</a> · <a href="https://github.com/liorq" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/lior-daniel-3b20a62ab/" target="_blank" rel="noopener">LinkedIn</a></span>
+</div></footer>
+
+<script>
+(function(){
+  var out=document.getElementById('out'), inp=document.getElementById('cmd'), tb=document.getElementById('tb');
+  var L='https://www.linkedin.com/in/lior-daniel-3b20a62ab/';
+  var M='mailto:liorqm@gmail.com?subject=Let%27s%20talk%20about%20a%20role';
+  var C={
+    help:'<span class="m">commands:</span> <span class="k">whoami</span> · <span class="k">stack</span> · <span class="k">projects</span> · <span class="k">lab</span> · <span class="k">hire</span> · <span class="k">clear</span>',
+    whoami:'Lior Daniel, Full-Stack developer at Matrix<br><span class="m">3.5 years on production systems. Six years in sales and management before that.</span><br><span class="p">status:</span> open to Full-Stack and Backend roles',
+    stack:'<span class="k">frontend</span>  Angular, TypeScript, SCSS<br><span class="k">backend</span>   C#, .NET Core, Web API, Worker Services<br><span class="k">data</span>      SQL Server, Dapper, EF, Redis<br><span class="k">infra</span>     Docker, Azure, IIS, Git',
+    projects:'→ Home Front Command: public site with real-time alerts<br>→ El Al: website crawler and legal docs system, end to end<br>→ Iscar: inventory and maintenance platform<br><span class="m">type</span> <span class="k">lab</span> <span class="m">for side projects</span>',
+    lab:'→ AI companion for EMDR-style sessions, <a href="https://www.linkedin.com/feed/update/urn:li:activity:7493736626364407809/" target="_blank" rel="noopener">demo video</a><br>→ a trading backtest on 27 years of data<br>→ making sense of 50,000 rows of Search Console data',
+    hire:'Good call. <a href="'+M+'">liorqm@gmail.com</a> or <a href="'+L+'" target="_blank" rel="noopener">LinkedIn</a>',
+    sudo:'Nice try. <span class="m">You get sudo after the interview.</span>',
+    ls:'work/  lab/  stack.txt  hire.sh'
+  };
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  function print(cmd,res){
+    var d=document.createElement('div');
+    d.innerHTML='<span class="p">$</span> '+esc(cmd)+'<br>'+res;
+    d.style.marginBottom='10px'; out.appendChild(d); tb.scrollTop=tb.scrollHeight;
+  }
+  function run(raw){
+    var c=raw.trim().toLowerCase(); if(!c) return;
+    if(c==='clear'){out.innerHTML='';return;}
+    var key=c.split(/\s+/)[0]; if(key==='hire.sh'||key==='./hire.sh') key='hire';
+    print(raw.trim(), C[key]||'<span class="m">command not found: '+esc(key)+'. Try</span> <span class="k">help</span>');
+  }
+  inp.addEventListener('keydown',function(e){if(e.key==='Enter'){run(inp.value);inp.value='';}});
+  tb.addEventListener('click',function(){inp.focus({preventScroll:true});});
+  document.querySelectorAll('.cmds button').forEach(function(b){b.addEventListener('click',function(){run(b.dataset.cmd);});});
+  run('whoami');
+})();
+</script>
+</body>
+</html>
